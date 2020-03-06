@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Web Push</title>
-<meta http-equiv="content-type" charset="utf-8">
-<link rel="manifest" href="./manifest.json">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Firebase Cloud MessagingによるWeb Push通知テスト</title>
+	<link rel="manifest" href="/manifest.json">
 </head>
-<style type="text/css">
-<!--
-body {
-user-select: none;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;	
-font-family:arial;
-font-weight:bold;
-}
+
+<body>
+	<h1>Firebase Cloud MessagingによるWeb Push通知テスト</h1>
+	<!--
+	<ul>
+		<li>デスクトップ Chrome / Firefox、スマホはAndroidのみ有効。</li>
+		<li>Androidではブラウザを立ち上げずとも通知が来る。</li>
+		<li>デスクトップ Chrome / Firefoxの場合、配信ドメインのタブが開いていると通知が来ません。</li>
+		<li>ページ遷移するか、配信ドメインのタブが閉じると、ペンドされていた通知が来ます。</li>
+	</ul>
 -->
-</style>
-<link rel="shortcut icon" href="#" />
-<!--link rel='stylesheet' type='text/css' href='style.css'-->
-<script type="text/javascript" src="main.js"></script>
-<body oncontextmenu="return false;" onload="init()">
-<input type="button" id="subscribe" value="permit nitification" onclick="requestPermission()">
-<input type="button" id="unsubscribe" value="delete token" style="display:none;" onclick="deleteToken()">
-<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-messaging.js"></script>
-<!--script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script-->
+	<p>
+		<input type="button" id="btnSubscribe" value="通知を許可する">
+		<input type="button" id="btnUnSubscribe" value="トークン削除" style="display:none;">
+	</p>
+	<p><input type="text" value="YOUR-INCETANCE-ID-TOKEN" id="textInstanceIdToken" style="width:100%;box-sizing:border-box;"></p>
+	<div id="sendWebPushArea" style="display:none;">
+		<p>下記をコピーしてこのタブを閉じ、別ブラウザで見てください</p>
+		<input type="text" value="" id="sendWebPush" style="width:100%;box-sizing:border-box;">
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+        var firebaseConfig = {
+    apiKey: "AIzaSyBJQ9zfamI1Ewgmh4ZNpNJ_7R1FA8p0NqA",
+    authDomain: "webpush-d22d0.firebaseapp.com",
+    databaseURL: "https://webpush-d22d0.firebaseio.com",
+    projectId: "webpush-d22d0",
+    storageBucket: "webpush-d22d0.appspot.com",
+    messagingSenderId: "511096896615",
+    appId: "1:511096896615:web:6b82314947dddf524768c2"
+    };
+		firebase.initializeApp(config);
+	</script>
+	<script src="main.js"></script>
 </body>
-<script>
-</script>
+
 </html>
