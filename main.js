@@ -17,6 +17,11 @@ messaging.onMessage(function(payload) {
 
 messaging.requestPermission();
 var serviceWorker = navigator.serviceWorker;
+
+serviceWorkerRegistration.unregister().then(function(r) {
+    console.log(r);
+});
+/*
 serviceWorker.register('firebase-messaging-sw.js').then(() => {
     return serviceWorker.ready;
 }).then(regist => {
@@ -27,7 +32,7 @@ serviceWorker.register('firebase-messaging-sw.js').then(() => {
         });
     });
 });
-
+*/
 /*
 function requestPermission() {
     Notification.requestPermission()
