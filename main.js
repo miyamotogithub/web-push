@@ -16,8 +16,8 @@ function init() {
     console.log(firebase);
     messaging = firebase.messaging();
     console.log(messaging);
-    /*messaging.usePubicVapidKey(
-    'BFAaREMWt7fx1KXI34GTC23oC7Qy8LZsY2DyN5O20HpV29J1WqnbCvaZPLiQRii9mw0lNycbUcC5inNy523WG1Y');*/
+    messaging.usePubicVapidKey(
+    'BFAaREMWt7fx1KXI34GTC23oC7Qy8LZsY2DyN5O20HpV29J1WqnbCvaZPLiQRii9mw0lNycbUcC5inNy523WG1Y');
 
     Notification.requestPermission().then((permission) => {
         if (permission === 'granted') {
