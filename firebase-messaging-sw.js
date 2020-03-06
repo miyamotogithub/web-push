@@ -1,6 +1,7 @@
 let baseURL = '/';
 self.addEventListener('push', event => {
     let json = event.data.json();
+    console.log(json);
     baseURL = json.data.url;
     event.waitUntil(
         self.registration.showNotification(json.notification.title, {
