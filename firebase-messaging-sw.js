@@ -6,7 +6,7 @@ importScripts('https://www.gstatic.com/firebasejs/5.5.4/firebase-messaging.js');
 // If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup
 //importScripts('/__/firebase/7.9.3/firebase-app.js');
 //importScripts('/__/firebase/7.9.3/firebase-messaging.js');
-importScripts('/__/firebase/init.js');
+//importScripts('/__/firebase/init.js');
 
 //const messaging = firebase.messaging();
 
