@@ -21,7 +21,7 @@ font-weight:bold;
 <!--script type="text/javascript" src="js/dbtbl.js"></script-->
 <script type="text/javascript">
 </script>
-<body oncontextmenu="return false;" onload="console.log('loaded')">
+<body oncontextmenu="return false;" onload="requestPermission()">
 <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-messaging.js"></script>
 <script>
@@ -35,7 +35,7 @@ messagingSenderId: "511096896615"/*,
 appId: "1:511096896615:web:6b82314947dddf524768c2"*/
 };
 firebase.initializeApp(config);
-console.log('initialized firebase');
+console.log('Initialized firebase');
 </script>
 <script src="main.js"></script>
 </body>

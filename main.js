@@ -8,3 +8,12 @@ messaging.onMessage(function(payload) {
 	//appendMessage(payload);
 	// [END_EXCLUDE]
 });
+function requestPermission() {
+    Notification.requestPermission()
+    .then(function(permission) {
+        if (permission === 'granted')
+            console.log('Notification permission granted');
+        else
+            console.log('Unable to get permission to notify');
+    });
+};
