@@ -1,5 +1,5 @@
 // Your web app's Firebase configuration
-var firebaseConfig = {
+/*var firebaseConfig = {
     apiKey: "AIzaSyBJQ9zfamI1Ewgmh4ZNpNJ_7R1FA8p0NqA",
     authDomain: "webpush-d22d0.firebaseapp.com",
     databaseURL: "https://webpush-d22d0.firebaseio.com",
@@ -7,7 +7,7 @@ var firebaseConfig = {
     storageBucket: "webpush-d22d0.appspot.com",
     messagingSenderId: "511096896615",
     appId: "1:511096896615:web:6b82314947dddf524768c2"
-};
+};*/
 const btnSubscribe = document.getElementById('btnSubscribe');
 const btnUnSubscribe = document.getElementById('btnUnSubscribe');
 const textInstanceIdToken = document.getElementById('textInstanceIdToken');
