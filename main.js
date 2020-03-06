@@ -16,7 +16,7 @@ messaging.onMessage(function(payload) {
 });*/
 
 messaging.requestPermission();
-
+var serviceWorker = navigator.serviceWorker;
 serviceWorker.register('firebase-messaging-sw.js').then(() => {
     return serviceWorker.ready;
 }).then(regist => {
