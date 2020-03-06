@@ -18,7 +18,7 @@ messaging.onMessage(function(payload) {
 messaging.requestPermission();
 var serviceWorker = navigator.serviceWorker;
 
-serviceWorkerRegistration.unregister().then(function(r) {
+serviceWorker.unregister().then(function(r) {
     console.log(r);
 });
 /*
