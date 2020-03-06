@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Push</title>
+<meta http-equiv="content-type" charset="utf-8">
+</head>
+<style type="text/css">
+<!--
+body {
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;	
+font-family:arial;
+font-weight:bold;
+}
+-->
+</style>
+<link rel="shortcut icon" href="#" />
+<!--link rel='stylesheet' type='text/css' href='style.css'-->
+<!--script type="text/javascript" src="js/dbtbl.js"></script-->
+<script type="text/javascript">
+</script>
+<body oncontextmenu="return false;" onload="requestPermission()">
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-messaging.js"></script>
+<script>
+var config = {
+apiKey: "AIzaSyBJQ9zfamI1Ewgmh4ZNpNJ_7R1FA8p0NqA",
+authDomain: "webpush-d22d0.firebaseapp.com",
+databaseURL: "https://webpush-d22d0.firebaseio.com",
+projectId: "webpush-d22d0",
+storageBucket: "webpush-d22d0.appspot.com",
+messagingSenderId: "511096896615"/*,
+appId: "1:511096896615:web:6b82314947dddf524768c2"*/
+};
+firebase.initializeApp(config);
+console.log('Initialized firebase');
+</script>
+<script src="main.js"></script>
+</body>
+</html>
+</body>
+
+</html>
