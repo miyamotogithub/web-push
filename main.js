@@ -1,6 +1,6 @@
 const messaging = firebase.messaging();
 console.log(messaging);
-messaging.usePublicVapidKey("BFAaREMWt7fx1KXI34GTC23oC7Qy8LZsY2DyN5O20HpV29J1WqnbCvaZPLiQRii9mw0lNycbUcC5inNy523WG1Y");
+//messaging.usePublicVapidKey("BFAaREMWt7fx1KXI34GTC23oC7Qy8LZsY2DyN5O20HpV29J1WqnbCvaZPLiQRii9mw0lNycbUcC5inNy523WG1Y");
 messaging.onMessage(function(payload) {
 	console.log('Message received. ', payload);
 	// [START_EXCLUDE]
@@ -14,6 +14,21 @@ messaging.onMessage(function(payload) {
 }).catch(function(err) {
     console.log('Service worker registration failed, error:', err);
 });*/
+
+messaging.requestPermission();
+
+serviceWorker.register('firebase-messaging-sw.js').then(() => {
+    return serviceWorker.ready;
+}).then(regist => {
+    messaging.useServiceWorker(regist);
+    messaging.requestPermission().then(() => {
+        messaging.getToken().then(token => {
+            console.log(token);
+        });
+    });
+});
+
+/*
 function requestPermission() {
     Notification.requestPermission()
     .then(function(permission) {
@@ -41,3 +56,4 @@ messaging.onTokenRefresh(function() {
         console.log(err);
     })
 });
+*/
