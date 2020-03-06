@@ -5,7 +5,7 @@ var firebaseConfig = {
     databaseURL: "https://webpush-d22d0.firebaseio.com",
     projectId: "webpush-d22d0",
     storageBucket: "webpush-d22d0.appspot.com",
-    messagingSenderId: "511096896615",
+    messagingSenderId: "103953800507",//"511096896615",
     appId: "1:511096896615:web:6b82314947dddf524768c2"
 };
 function init() {
