@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Push</title>
+<meta http-equiv="content-type" charset="utf-8">
+<link rel="manifest" href="/manifest.json">
+</head>
+<style type="text/css">
+<!--
+body {
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;	
+font-family:arial;
+font-weight:bold;
+}
+-->
+</style>
+<link rel="shortcut icon" href="#" />
+<!--link rel='stylesheet' type='text/css' href='style.css'-->
+<script type="text/javascript" src="main.js"></script>
+<body oncontextmenu="return false;" onload="init()">
+<input type="button" id="subscribe" value="permit nitification" onclick="requestPermission()">
+<input type="button" id="unsubscribe" value="delete token" style="display:none;" onclick="deleteToken()">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+<!--script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>  
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-database.js"></script-->
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-messaging.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- Add the entire Firebase JavaScript SDK -->
+<!--script src="https://www.gstatic.com/firebasejs/7.9.3/firebase.js"></script-->
+</body>
+<script>
+</script>
+</html>
