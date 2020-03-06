@@ -11,9 +11,27 @@ messaging.onMessage(function(payload) {
 function requestPermission() {
     Notification.requestPermission()
     .then(function(permission) {
-        if (permission === 'granted')
+        if (permission === 'granted') {
             console.log('Notification permission granted');
+            getToken();
+        }
         else
             console.log('Unable to get permission to notify');
     });
 };
+function getToken() {
+    messaging.getToken()
+    .then(function(currentToken) {
+        console.log(currentToken);
+    }).catch(function(err) {
+        console.log(err);
+    })
+}
+messaging.onTokenRefresh(function() {
+    messageing.getToken()
+    .then(function(refreshedToken) {
+        console.log(refreshedToken);
+    }).catch(function(err) {
+        console.log(err);
+    })
+});
