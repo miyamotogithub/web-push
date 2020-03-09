@@ -4,10 +4,10 @@ self.addEventListener('push', event => {
     console.log(json);
     //baseURL = json.data.url;
     event.waitUntil(
-        self.registration.showNotification(json.notification.title, {
-            'body': json.notification.body,
+        self.registration.showNotification(json.data.title, {
+            'body': json.data.body,
             'tag': 'request'/*,
-            'actions': JSON.parse(json.data.action)*/
+            actions': JSON.parse(json.data.action)*/
         })
     );
 });
