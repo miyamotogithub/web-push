@@ -6,7 +6,8 @@ self.addEventListener('push', event => {
     event.waitUntil(
         self.registration.showNotification(json.data.title, {
             'body': json.data.body,
-            'tag': 'request'/*,
+            'icon': json.data.icon,
+            'url': json.data.url/*,
             actions': JSON.parse(json.data.action)*/
         })
     );
