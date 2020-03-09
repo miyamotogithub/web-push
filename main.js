@@ -21,7 +21,7 @@ var serviceWorker = navigator.serviceWorker;
 /*ServiceWorkerRegistration.unregister().then(function(r) {
     console.log(r);
 });*/
-/*
+/**/
 serviceWorker.register('firebase-messaging-sw.js').then(() => {
     return serviceWorker.ready;
 }).then(regist => {
@@ -32,7 +32,7 @@ serviceWorker.register('firebase-messaging-sw.js').then(() => {
         });
     });
 });
-*/
+/**/
 /*
 function requestPermission() {
     Notification.requestPermission()
@@ -53,6 +53,7 @@ function getToken() {
         console.log(err);
     })
 }
+*/
 messaging.onTokenRefresh(function() {
     messageing.getToken()
     .then(function(refreshedToken) {
@@ -61,4 +62,3 @@ messaging.onTokenRefresh(function() {
         console.log(err);
     })
 });
-*/
